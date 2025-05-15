@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.home{
+    background-image: url('./assets/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container{
+  overflow-x: hidden;
+}
+.marquee {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    border: 2px dashed lightgray;
+  }
+  
+  .marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+  }
+  
+  .marquee__content img {
+    max-width: 2rem;
+    width: 100%;
+    object-fit: contain;
+  }
+  
+  .marquee__content > * {
+    flex: 0 0 auto;
+    color: white;
+    background: #e8daef;
+    margin: 2px;
+    padding: 1rem 2rem;
+    border-radius: 0.25rem;
+    text-align: center;
+  }
+  
+  .marquee__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .partners{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/partnersBg.svg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* gap: 12px; */
+  }
+
+  .banner{
+    background-image: url('./assets/bg.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('./assets/partnersBg.svg'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .med_banner{
+    background-image: url('./assets/med.jpg');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-image: url('./assets/partnersBg.svg'); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .bg_banner{
+    background-image: url('./assets/Harrington.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+  }
+  .banner{
+    background-image: url('./assets/section_banner1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /* Hide scrollbar for Webkit browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox and Edge */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
