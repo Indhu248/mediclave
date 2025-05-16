@@ -43,7 +43,7 @@ const Schedule = () => {
             Mediclave - 2025
           </h1>
         </div>
-        <EventSchedule height={"auto"} name="Download"/>
+        <EventSchedule height={"auto"} name={"Download"} link={'/mediclave_brochure.pdf'}/>
         {/* <div className="max-w-5xl mx-auto flex flex-col items-center my-8"> */}
           {/* <h1 className="text-5xl font-bold text-green-400">
           </h1> */}

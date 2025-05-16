@@ -26,7 +26,7 @@ const Orators = () => {
       </div>
 
       <a href="/orators">
-        <button className="bg-green-400 px-10 md:px-20 py-2 rounded-full mt-6 text-sm md:text-base">
+        <button className="bg-one px-10 md:px-20 py-2 rounded-full mt-6 text-sm md:text-base">
           View All
         </button>
       </a>

@@ -5,14 +5,15 @@ import panelmember3 from "./panelmember2.jpg";
 import panelmember4 from "./panelmember4.avif";
 import mediclave_logo from "./Mediclave_logo.png";
 import weblogo from "./weblogo.png";
+import whatsapp from './logo-whatsapp.svg'
 
 import {
   HeartPulse,
-  Stethoscope,
-  Eye,
+  Ribbon,
+  Venus,
   Droplets,
-  FlaskConical,
-  Microscope,
+  Accessibility,
+  Dna,
   Baby,
   Brain,
   ShieldOff,
@@ -27,6 +28,8 @@ import {
   Phone,
   Monitor,
   Bone,
+  Stethoscope,
+  PersonStanding,
 } from "lucide-react";
 
 import one from "./partners/one.webp";
@@ -41,7 +44,7 @@ import nine from "./partners/nine.webp";
 import ten from "./partners/ten.webp";
 
 import Alireza from "./panel_members/Alireza.webp";
-import Chrysoula from "./panel_members/Chrysoula_I_Liakou.webp";
+import Chrysoula from "./orators/Chrysoula-I.jpg";
 import Dana from "./panel_members/Dana-York.webp";
 import Hassan from "./panel_members/Hassan-El-Tamimi.webp";
 import Laura from "./panel_members/LauraSarbu.webp";
@@ -204,7 +207,9 @@ export {
   platinum,
   about_img,
   side,
-  section_banner
+  section_banner,
+  whatsapp,
+  HeartPulse
 };
 
 export const panel_members = [
@@ -247,27 +252,27 @@ export const tracks = [
 
   // ❤️ Major Specialties
   { name: "Cardiology", icon: HeartPulse },
-  { name: "Gynecology", icon: Syringe }, // Birth/pregnancy-related, syringe fits better than Eye
+  { name: "Gynecology", icon: Stethoscope }, // Birth/pregnancy-related, syringe fits better than Venus
   { name: "Pediatrics", icon: Baby },
   { name: "Emergency Medicine", icon: AlertCircle }, // Alert = emergency
   { name: "Oncology", icon: ScanLine }, // Scanning for tumors/cancer
   { name: "Gastroenterology", icon: TestTube }, // Lab/intestinal testing
 
   // 🧬 Disease & Disorders
-  { name: "Genetic Disorder", icon: Microscope },
+  { name: "Genetic Disorder", icon: Dna },
   { name: "Infectious Diseases", icon: Biohazard },
   { name: "Endocrinology", icon: Droplets }, // Hormones, blood/sugar → Droplets
-  { name: "Rheumatology", icon: Bone }, // Autoimmune/weakness symbolism
+  { name: "Rheumatology", icon: PersonStanding }, // Autoimmune/weakness symbolism
 
   // 🧠 Mental & Specialized Health
-  { name: "Mental Health", icon: Stethoscope }, // Emotional care
-  { name: "Pain Management", icon: FlaskConical }, // Experimentation/management
+  { name: "Mental Health", icon: Ribbon }, // Emotional care
+  { name: "Pain Management", icon: Accessibility }, // Experimentation/management
   { name: "Nutrition and Metabolism", icon: UserCheck }, // Health monitoring
   { name: "Addiction Medicine", icon: Hospital },
   { name: "Geriatrics", icon: UserCheck }, // Corrected spelling from "Gerilatrics"
 
   // 👩‍⚕️ Public & Women’s Health
-  { name: "Women's Health & Midwifery", icon: Eye }, // Could use a more feminine symbol, Eye for observation
+  { name: "Women's Health & Midwifery", icon: Venus }, // Could use a more feminine symbol, Venus for observation
   { name: "Public Health", icon: Biohazard },
 
   // 💉 Immunology

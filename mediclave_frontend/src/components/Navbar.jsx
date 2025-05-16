@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { logo, med_logo } from "../assets";
 import { Menu, X } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const location = useLocation();
@@ -49,7 +49,7 @@ const Navbar = () => {
               marginTop: scrolled ? "0rem" : "1rem",
               border: scrolled ? "none" : "2px solid black",
               backgroundColor: scrolled ? "transparent" : "white",
-              padding: scrolled ? "0px" : "4px"
+              padding: scrolled ? "0px" : "4px",
             }}
           />
         </div>
@@ -86,12 +86,11 @@ const Navbar = () => {
           >
             Register
           </a>
-          <a
-            href="https://foodmeet.helixconferences.com/brochure-download/"
-            className="bg-accent px-4 py-2 text-white rounded-full hover:opacity-90 transition"
-          >
-            Brochure Download
-          </a>
+          <Link to="/brochure-download">
+            <button className="block w-full bg-accent text-center px-4 py-2 text-white rounded-full hover:opacity-90 transition">
+              Brochure Download
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -121,12 +120,11 @@ const Navbar = () => {
           >
             Register
           </a>
-          <a
-            href="/brochure-download"
-            className="block w-full bg-accent text-center px-4 py-2 text-white rounded-full hover:opacity-90 transition"
-          >
-            Brochure Download
-          </a>
+          <Link to="/brochure-download">
+            <button className="block w-full bg-accent text-center px-4 py-2 text-white rounded-full hover:opacity-90 transition">
+              Brochure
+            </button>
+          </Link>
         </div>
       )}
     </header>

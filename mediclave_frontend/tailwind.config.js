@@ -1,5 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: ['style-loader', 'css-loader', 'postcss-loader'],
+      include: /node_modules/,
+    });
+    return config;
+  },
     content: ["./src/**/*.{html,js,jsx}"],
     theme: {
       extend: {
@@ -9,6 +17,7 @@ module.exports = {
           'spin-slow': 'spin 20s linear infinite',
         },
         colors: {
+          one: 'rgb(114 235 233)',
           primary: '#F1EFEC', // Custom blue
           secondary: '#D4C9BE', // Custom purple
           accent: '#123458', // Custom yellow
@@ -17,7 +26,7 @@ module.exports = {
           track: {
           odd: "red",  // Teal
           even: "green", // Blue
-          green: 'green-400'
+          green: '#58c1bf'
         },
         },
         keyframes: {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { logo, weblogo } from "../assets";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ActualNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -57,9 +58,11 @@ const ActualNavbar = () => {
           <button className="border border-accent py-2 px-4 rounded-full">
             <a href="https://helixconferences.com/register.php?type=conference">Register</a>
           </button>
-          <button className="bg-accent px-4 py-2 text-white rounded-full">
-            <a href="https://foodmeet.helixconferences.com/brochure-download/">Brochure Download</a>
-          </button>
+         <Link to="/brochure-download">
+                     <button className="block w-full bg-accent text-center px-4 py-2 text-white rounded-full hover:opacity-90 transition">
+                       Brochure
+                     </button>
+                   </Link>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -86,9 +89,11 @@ const ActualNavbar = () => {
           <button className="w-full border border-accent py-2 px-4 rounded-full">
             Register
           </button>
-          <button className="w-full bg-accent px-4 py-2 text-white rounded-full">
-            Brochure Download
-          </button>
+          <Link to="/brochure-download">
+            <button className="block w-full bg-accent text-center px-4 py-2 text-white rounded-full hover:opacity-90 transition">
+              Brochure Download
+            </button>
+          </Link>
         </div>
       )}
     </div>

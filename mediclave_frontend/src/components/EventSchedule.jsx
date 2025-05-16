@@ -33,19 +33,19 @@ const EventSchedule = ({ height, name, link }) => {
 
   return (
     <div className="w-full px-4 md:px-12 py-8 flex flex-col items-center border-t">
-      <p className="text-xl font-semibold text-green-500">Event Schedule</p>
+      <p className="text-xl font-semibold text-one">Event Schedule</p>
       <h1 className="text-3xl md:text-4xl font-bold text-center">
         Our Events Schedule Plan
       </h1>
 
-      <div className="flex flex-wrap justify-center gap-4 my-6 bg-green-400/20 p-3 rounded-xl">
+      <div className="flex flex-wrap justify-center gap-4 my-6 bg-one/20 p-3 rounded-xl">
         {dayButtons.map(({ day, label, label2, weekday, index }) => (
           <button
             key={day}
             onClick={() => setSelectedDay(day)}
             className={`flex items-center gap-2 px-4 py-3 rounded-full border text-sm transition-all ${
               selectedDay === day
-                ? "bg-green-500 text-white border-green-600"
+                ? "bg-one text-white border-green-600"
                 : "bg-slate-100 text-black border-slate-300"
             }`}
           >
@@ -57,10 +57,10 @@ const EventSchedule = ({ height, name, link }) => {
               <div className="text-xs">{weekday}</div>
             </div> */}
             <div className="flex flex-row items-center gap-2">
-              <h1 className={`${selectedDay === day ? "bg-white text-black" : "bg-green-400 text-white"} p-1 rounded-lg font-semibold`}>{label2} <br/>0{day}</h1>
+              <h1 className={`${selectedDay === day ? "bg-white text-black" : "bg-one text-white"} p-1 rounded-lg font-semibold`}>{label2} <br/>0{day}</h1>
               <div >
                 <p className="text-xl font-bold">{label}<sup>th</sup> Nov</p>
-                <p>Saturday</p>
+                <p>{weekday}</p>
               </div>
             </div>
           </button>
@@ -79,7 +79,7 @@ const EventSchedule = ({ height, name, link }) => {
 
       {link && (
         <a href={link}>
-          <button className="bg-green-400 px-10 md:px-20 py-2 rounded-full mt-6 text-sm md:text-base">
+          <button className="bg-one px-10 md:px-20 py-2 rounded-full mt-6 text-sm md:text-base">
             {name}
           </button>
         </a>

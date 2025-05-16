@@ -26,7 +26,7 @@ const PanelMembers = () => {
       </div>
 
       <Link to="/executivepanel">
-        <button className="bg-green-400 hover:bg-green-500 transition px-6 sm:px-10 md:px-20 py-3 rounded-full mt-6 text-sm md:text-base text-white font-semibold shadow">
+        <button className="bg-one hover:bg-green-500 transition px-6 sm:px-10 md:px-20 py-3 rounded-full mt-6 text-sm md:text-base text-white font-semibold shadow">
           View All
         </button>
       </Link>

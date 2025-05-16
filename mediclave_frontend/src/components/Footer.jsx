@@ -30,7 +30,7 @@ const Footer = () => {
 
       {/* Grid 2 */}
       <div className="w-full md:w-1/4 flex flex-col items-center text-center md:text-left">
-        <h1 className="text-green-400 font-semibold text-3xl border-b border-slate-800">
+        <h1 className="text-one font-semibold text-3xl border-b border-slate-800">
           Quick Links
         </h1>
         <div className="flex flex-col mt-4 gap-1">
@@ -47,7 +47,7 @@ const Footer = () => {
 
       {/* Grid 3 */}
       <div className="w-full md:w-1/4 flex flex-col items-center md:items-start text-center md:text-left">
-        <h1 className="text-green-400 font-semibold text-3xl border-b border-slate-800 w-auto md:w-[16vw]">
+        <h1 className="text-one font-semibold text-3xl border-b border-slate-800 w-auto md:w-[16vw]">
           Social Media
         </h1>
         {socialLinks.map(({ id, name, url, icon }) => (
@@ -57,7 +57,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               title={name}
-              className="text-green-400 p-2 rounded-full bg-black text-md cursor-pointer flex flex-row items-center gap-2"
+              className="text-one p-2 rounded-full bg-black text-md cursor-pointer flex flex-row items-center gap-2"
             >
               {icon}<p className="text-white">{name}</p>
             </a>
@@ -67,7 +67,7 @@ const Footer = () => {
 
       {/* Grid 4 */}
       <div className="w-full md:w-1/4 flex flex-col gap-4 items-center md:items-start text-center md:text-left">
-        <h1 className="text-green-400 font-semibold text-3xl border-b border-slate-800">
+        <h1 className="text-one font-semibold text-3xl border-b border-slate-800">
           Get In Touch
         </h1>
         <div className="flex flex-col gap-4 text-slate-300">
@@ -88,7 +88,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <a href="https://helixconferences.com/register.php?type=conference" className="bg-green-500 px-12 py-2 rounded-full mt-1">
+          <a href="https://helixconferences.com/register.php?type=conference" className="bg-one px-12 py-2 rounded-full mt-1">
             Register
           </a>
         </div>

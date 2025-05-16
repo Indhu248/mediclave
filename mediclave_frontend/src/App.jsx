@@ -10,6 +10,7 @@ import Orators from "./pages/Orators";
 import Venue from "./pages/Venue";
 import About from "./pages/About";
 
+
 import HassanElTamimi from "./pages/executive_members/HassanElTamimi";
 import MohamedHosni from "./pages/executive_members/MohamedHosni";
 import DanaYork from "./pages/executive_members/DanaYork";
@@ -37,6 +38,7 @@ import RotatingLogos from "./pages/RotatingLogos";
 import FakeContactForm from "./pages/FakeContact";
 import AbstractSubmission from "./pages/AbstractSubmission";
 import BrochureDownload from "./pages/BrochureDownload";
+import FAQPage from "./pages/FAQPage";
 // import FAQ from "./components/Faq";
 
 function App() {
@@ -72,6 +74,7 @@ function App() {
         <Route path="/table-data" element={<ContactTable />} />
         <Route path="/abstract-submission" element={<AbstractSubmission />} />
         <Route path='/brochure-download' element={<BrochureDownload />} />
+        <Route path="/faq" element={<FAQPage />} />
         {/* <Route path='/FAQ' element={<FAQ />} /> */}
 
 

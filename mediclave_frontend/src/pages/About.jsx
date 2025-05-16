@@ -136,7 +136,7 @@ const AboutMediclave = () => {
         </h1>
       </div>
 
-      <h1 className="text-4xl mt-2 font-bold text-green-400">MEDICLAVE</h1>
+      <h1 className="text-4xl mt-2 font-bold text-one">MEDICLAVE</h1>
       <p className="text-center text-gray-600 mb-6">
         <strong>{data.event.date}</strong> | {data.event.location}
       </p>
@@ -152,7 +152,7 @@ const AboutMediclave = () => {
 
       {/* Themes Section */}
       <section className="mb-16 text-center w-full px-12">
-        <h2 className="text-4xl my-8 font-bold text-green-400">
+        <h2 className="text-4xl my-8 font-bold text-one">
           Who Can Attend...
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -161,7 +161,7 @@ const AboutMediclave = () => {
               key={idx}
               className="bg-white rounded-xl shadow px-4 py-6 flex flex-col items-center hover:shadow-lg transition"
             >
-              <Icon className="h-10 w-10 text-green-600 mb-3" />
+              <Icon className="h-10 w-10 text-one mb-3" />
               <h3 className="text-lg font-semibold text-gray-800">
                 {description}
               </h3>
@@ -173,7 +173,7 @@ const AboutMediclave = () => {
 
       {/* Audience Section */}
       {/* <section className="mb-16 text-center bg-black rounded-tl-3xl rounded-br-3xl p-8 w-full">
-        <h2 className="text-4xl font-bold text-green-400 mb-8">
+        <h2 className="text-4xl font-bold text-one mb-8">
           Who Should Attend?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">
@@ -191,7 +191,7 @@ const AboutMediclave = () => {
 
       {/* Highlights Section */}
       <section className="mb-16 text-center w-full px-12">
-        <h2 className="text-4xl font-bold text-green-400 mb-8">
+        <h2 className="text-4xl font-bold text-one mb-8">
           Event Highlights
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full items-start">
@@ -216,22 +216,22 @@ const AboutMediclave = () => {
 
       {/* Dates Section */}
       <section className="mb-16 text-center w-full md:px-12 px-4">
-        <h2 className="text-4xl font-bold text-green-400 mb-8">
+        <h2 className="text-4xl font-bold text-one mb-8">
           Important Dates
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full text-sm">
           <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
-            <Calendar className="w-6 h-6 text-green-600 mb-2" />
+            <Calendar className="w-6 h-6 text-one mb-2" />
             <strong>Event Date</strong>
             <p>{data.dates.eventDate}</p>
           </div>
           <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
-            <Globe className="w-6 h-6 text-green-600 mb-2" />
+            <Globe className="w-6 h-6 text-one mb-2" />
             <strong>Proposed Venue</strong>
             <p>{data.dates.venue}</p>
           </div>
           <div className="bg-white rounded-xl shadow p-4 flex flex-col items-center">
-            <BadgeCheck className="w-6 h-6 text-green-600 mb-2" />
+            <BadgeCheck className="w-6 h-6 text-one mb-2" />
             <strong>Registration Deadline</strong>
             <p>{data.dates.registrationDeadline}</p>
           </div>
@@ -240,16 +240,16 @@ const AboutMediclave = () => {
 
       {/* Call for Papers */}
       {/* <section className="mb-16 text-center w-full max-w-3xl">
-        <h2 className="text-4xl font-bold text-green-400 mb-6">
+        <h2 className="text-4xl font-bold text-one mb-6">
           Call for Papers
         </h2>
-        <FileText className="w-8 h-8 mx-auto text-green-600 mb-2" />
+        <FileText className="w-8 h-8 mx-auto text-one mb-2" />
         <p className="text-lg text-gray-700">{data.callForPapers}</p>
       </section> */}
 
       {/* Registration Section */}
       {/* <section className="mb-16 text-center w-full">
-        <h2 className="text-4xl font-bold text-green-400 mb-6">Registration</h2>
+        <h2 className="text-4xl font-bold text-one mb-6">Registration</h2>
         <p className="text-lg text-gray-700 mb-4">
           🎉 <strong>{data.registration.note}</strong>
         </p>
@@ -265,14 +265,14 @@ const AboutMediclave = () => {
             </p>
           </div>
         </div>
-        <button className="mt-6 bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-xl shadow">
+        <button className="mt-6 bg-one hover:bg-green-700 text-white font-semibold px-6 py-2 rounded-xl shadow">
           Register Now
         </button>
       </section> */}
 
       {/* Sponsors Section */}
       {/* <section className="text-center w-full max-w-3xl">
-        <h2 className="text-4xl font-bold text-green-400 mb-4">
+        <h2 className="text-4xl font-bold text-one mb-4">
           Sponsors & Partners
         </h2>
         <p className="text-lg">

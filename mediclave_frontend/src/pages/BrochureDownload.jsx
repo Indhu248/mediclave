@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { banner_style } from "../assets/styles";
 
-const AbstractSubmission = () => {
+const BrochureDownload = () => {
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -20,7 +20,7 @@ const AbstractSubmission = () => {
     interestedIn: "",
   });
 
-  const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const value = e.target.type === "file" ? e.target.files[0] : e.target.value;
@@ -29,38 +29,58 @@ const AbstractSubmission = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
-      const formData = new FormData();
+      const form = new FormData();
       Object.keys(form).forEach((key) => {
-        formData.append(key, form[key]);
+        form.append(key, form[key]);
       });
 
-      await axios.post("http://localhost:5000/brochure-download", formData, {
+      await axios.post("http://localhost:5000/api/brochure-download", form, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
         },
       });
-      setSent(true);
+
+      setLoading(false);
       alert("Abstract submitted successfully.");
+      // Clear form
+      setForm({
+        firstName: "",
+        lastName: "",
+        mobileNumber: "",
+        address: "",
+        state: "",
+        country: "",
+        university: "",
+        email: "",
+        affiliation: "",
+        linkedin: "",
+        twitter: "",
+        abstractTitle: "",
+        abstract: null,
+        interestedIn: "",
+      });
     } catch (err) {
-      alert("Submission failed.");
+      setLoading(false);
+      alert("Submission failed. Please try again.");
     }
   };
 
   const presentationOptions = [
     "Paper Presentation",
     "Poster Presentation",
-    "e-poster",
-    "exhibitor/Sponsor",
+    "E-poster",
+    "Exhibitor/sponsor",
     "Media Partner",
-    "Webinars",
+    "Webinar",
   ];
 
   return (
     <div className="container flex flex-col justify-center items-center">
       <div className={`${banner_style} banner`}>
         <h1 className="text-slate-100 text-3xl sm:text-5xl md:text-6xl font-bold px-4">
-          Abstract Submission
+          Brochure Download
         </h1>
       </div>
 
@@ -94,11 +114,27 @@ const AbstractSubmission = () => {
             className="border p-4 rounded-xl"
           />
           <input
-            name="email"
-            type="email"
-            value={form.email}
+            name="address"
+            value={form.address}
             onChange={handleChange}
-            placeholder="Email"
+            placeholder="Address"
+            rows={3}
+            required
+            className="border p-4 rounded-xl"
+          />
+          <input
+            name="state"
+            value={form.state}
+            onChange={handleChange}
+            placeholder="State"
+            required
+            className="border p-4 rounded-xl"
+          />
+          <input
+            name="country"
+            value={form.country}
+            onChange={handleChange}
+            placeholder="Country"
             required
             className="border p-4 rounded-xl"
           />
@@ -106,7 +142,7 @@ const AbstractSubmission = () => {
             name="university"
             value={form.university}
             onChange={handleChange}
-            placeholder="University"
+            placeholder="University / Industry"
             required
             className="border p-4 rounded-xl"
           />
@@ -132,39 +168,6 @@ const AbstractSubmission = () => {
             placeholder="Twitter Handle"
             className="border p-4 rounded-xl"
           />
-          <input
-            name="abstractTitle"
-            value={form.abstractTitle}
-            onChange={handleChange}
-            placeholder="Abstract Title"
-            required
-            className="border p-4 rounded-xl col-span-2"
-          />
-          <textarea
-            name="address"
-            value={form.address}
-            onChange={handleChange}
-            placeholder="Address"
-            rows={3}
-            required
-            className="border p-4 rounded-xl col-span-2"
-          />
-          <input
-            name="state"
-            value={form.state}
-            onChange={handleChange}
-            placeholder="State"
-            required
-            className="border p-4 rounded-xl"
-          />
-          <input
-            name="country"
-            value={form.country}
-            onChange={handleChange}
-            placeholder="Country"
-            required
-            className="border p-4 rounded-xl"
-          />
           <select
             name="interestedIn"
             value={form.interestedIn}
@@ -179,26 +182,26 @@ const AbstractSubmission = () => {
               </option>
             ))}
           </select>
-          <div className="col-span-2 space-y-2">
-            <label className="block text-sm font-medium text-gray-700">
-              Upload Abstract (PDF)
-            </label>
-            <input
-              type="file"
-              name="abstract"
-              onChange={handleChange}
-              accept=".pdf"
-              required
-              className="w-full"
-            />
-          </div>
+          {/* <div className="col-span-2 space-y-2"> */}
+          {/* <label className="block text-sm font-medium text-gray-700">
+        Upload Abstract (PDF)
+      </label> */}
+          {/* <input
+        type="file"
+        name="abstract"
+        onChange={handleChange}
+        accept=".pdf"
+        required
+        className="w-full border-none"
+      /> */}
+          {/* </div> */}
           <div className="col-span-2">
             <a
-              href="/demo-abstract.pdf"
+              href="/mediclave_brochure.pdf"
               download
-              className="text-blue-600 hover:text-blue-800 underline"
+              className="text-blue-600 hover:text-blue-800"
             >
-              Download Demo Abstract
+              Download Brochure
             </a>
           </div>
         </div>
@@ -207,11 +210,11 @@ const AbstractSubmission = () => {
           type="submit"
           className="bg-black text-white px-8 py-4 rounded-xl flex w-full md:w-auto text-center items-center justify-center mt-6"
         >
-          Submit Abstract
+          Submit
         </button>
       </form>
     </div>
   );
 };
 
-export default AbstractSubmission;
+export default BrochureDownload;

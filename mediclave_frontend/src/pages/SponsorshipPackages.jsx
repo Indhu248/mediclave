@@ -98,20 +98,20 @@ const SponsorshipPackages = () => {
             className="border border-gray-200 rounded-2xl shadow-md p-4 bg-white items-center flex flex-col justify-between"
           >
             <div className="flex flex-col items-left">
-              <div className="bg-green-200/50 rounded-tl-xl rounded-br-full mb-2 p-2 flex flex-row items-center">
+              <div className="bg-one/50 rounded-tl-xl rounded-br-full mb-2 p-2 flex flex-row items-center">
                 <img
                   src={pkg.badge}
                   alt=""
                   className="object-contain w-16 h-16"
                 />
-                <h2 className="text-2xl font-semibold text-green-600 ">
+                <h2 className="text-2xl font-semibold text-one ">
                   {pkg.type}
                 </h2>
               </div>
               <ul className="list-disc list-inside text-gray-700 space-y-2">
                 {pkg.benefits.map((benefit, index) => (
                   <div className="flex flex-row gap-2 items-center">
-                    <Sparkles size={14} className="text-green-400 fill-green-400" />
+                    <Sparkles size={14} className="text-one fill-one" />
                     <li key={index} className="text-[15px] list-none">
                       {benefit}
                     </li>
@@ -119,8 +119,8 @@ const SponsorshipPackages = () => {
                 ))}
               </ul>
             </div>
-            <Link>
-              <button className="w-auto bg-green-400 text-black px-8 py-2 rounded-full my-8">
+            <Link to='/contact'>
+              <button className="w-auto bg-one text-black px-8 py-2 rounded-full my-8">
                 Become a Partner
               </button>
             </Link>
@@ -134,8 +134,8 @@ const SponsorshipPackages = () => {
             className="border border-gray-200 rounded-2xl shadow-md p-4 bg-white items-center flex flex-col justify-between"
           >
             <div>
-              <div className="bg-green-200/50 rounded-tl-xl rounded-br-full mb-2">
-                <h2 className="text-2xl font-semibold text-green-600 mb-4 text-center py-2">
+              <div className="bg-one/50 rounded-tl-xl rounded-br-full mb-2">
+                <h2 className="text-2xl font-semibold text-one mb-4 text-center py-2">
                   {pkg.type}
                 </h2>
               </div>
@@ -149,7 +149,7 @@ const SponsorshipPackages = () => {
                         key={index}
                         className="flex items-start gap-2 text-[15px]"
                       >
-                        <Sparkles size={14} className="text-green-400 mt-1 fill-green-400" />
+                        <Sparkles size={14} className="text-one mt-1 fill-one" />
                         <span>{benefit}</span>
                       </li>
                     ))}
@@ -158,8 +158,8 @@ const SponsorshipPackages = () => {
               </div>
             </div>
 
-            <Link href="#partnership-form">
-              <button className="w-auto bg-green-400 text-black px-8 py-2 rounded-full my-8">
+            <Link href="/contact">
+              <button className="w-auto bg-one text-black px-8 py-2 rounded-full my-8">
                 Become a Partner
               </button>
             </Link>

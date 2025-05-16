@@ -277,8 +277,8 @@ const ScrollingTracks = () => {
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
-            <h2 className="text-3xl font-bold mb-1 text-green-400 flex items-center gap-2">
-              <Sparkle className="fill-green-400" />
+            <h2 className="text-3xl font-bold mb-1 text-one flex items-center gap-2">
+              <Sparkle className="fill-one" />
               {pausedTrack.title}
             </h2>
             <h3 className="text-xl text-gray-600 font-semibold mb-3">

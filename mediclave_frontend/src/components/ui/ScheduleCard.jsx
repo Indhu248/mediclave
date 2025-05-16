@@ -11,7 +11,7 @@ const ScheduleCard = ({ time, plan, note }) => {
 
         <div className="flex flex-col gap-2 w-full">
           {/* Time and location */}
-          <div className="flex flex-wrap gap-3 text-sm text-green-500 font-semibold">
+          <div className="flex flex-wrap gap-3 text-sm text-one font-semibold">
             <div className="flex items-center gap-1">
               <Timer size={18} />
               <span>{time}</span>
@@ -33,7 +33,7 @@ const ScheduleCard = ({ time, plan, note }) => {
       </div>
 
       {/* Right-side button (optional) */}
-      {/* <button className="px-6 py-2 bg-green-400 rounded-full text-sm self-end sm:self-center">
+      {/* <button className="px-6 py-2 bg-one rounded-full text-sm self-end sm:self-center">
         Register
       </button> */}
     </div>

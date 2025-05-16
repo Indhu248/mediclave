@@ -28,8 +28,8 @@ const AboutUs = () => {
           About Us
         </p> */}
         <h1 className="text-xl md:text-3xl font-bold my-2">
-          <span className="text-green-400">Innovations</span> in Global Health: Bridging Gaps{" "}
-          <span className="text-green-400">through Technology & Collaboration</span>
+          <span className="text-one">Innovations</span> in Global Health: Bridging Gaps{" "}
+          <span className="text-one">through Technology & Collaboration</span>
         </h1>
 
         <div className="flex flex-col gap-3 mt-4">
@@ -37,7 +37,7 @@ const AboutUs = () => {
             <div key={idx} className="flex flex-row gap-2 items-start">
               <CircleChevronRight
                 size={24}
-                className="text-green-500 flex-shrink-0 mt-1"
+                className="text-one flex-shrink-0 mt-1"
               />
               <p className="text-sm md:text-base">{item}</p>
             </div>
@@ -45,7 +45,7 @@ const AboutUs = () => {
         </div>
 
         <Link to="/about">
-          <button className="flex bg-black text-green-400 px-6 md:px-8 py-2 my-4 rounded-full text-sm md:text-base">
+          <button className="flex bg-black text-one px-6 md:px-8 py-2 my-4 rounded-full text-sm md:text-base">
             Know More
           </button>
         </Link>

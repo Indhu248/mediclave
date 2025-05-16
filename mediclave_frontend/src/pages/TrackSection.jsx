@@ -204,7 +204,7 @@ const TrackCard = ({ title, subtitle, description, image, reverse }) => {
         onMouseEnter={() => setIsTextPaused(true)}
         onMouseLeave={() => setIsTextPaused(false)}
       >
-        <h2 className="text-3xl md:text-5xl font-bold text-green-500 mb-2">
+        <h2 className="text-3xl md:text-5xl font-bold text-one mb-2">
           {title}
         </h2>
         <h3 className="text-lg font-semibold text-gray-600 mb-2">

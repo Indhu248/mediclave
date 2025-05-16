@@ -131,7 +131,7 @@ const AbstractSubmission = () => {
       placeholder="Address"
       rows={3}
       required
-      className="border p-4 rounded-xl col-span-2"
+      className="border p-4 rounded-xl"
     />
     <input
       name="state"
@@ -208,7 +208,7 @@ const AbstractSubmission = () => {
     </div>
     <div className="col-span-2">
       <a
-        href="/sample_abstract.pdf"
+        href="/sample_abstract.docx"
         download
         className="text-blue-600 hover:text-blue-800 underline"
       >

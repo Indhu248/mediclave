@@ -35,7 +35,7 @@ const Partners = () => {
 
   return (
     <div className="py-16 bg-white flex flex-col items-center">
-      <p className="text-green-500 font-semibold text-xl mb-2">Partners</p>
+      <p className="text-one font-semibold text-xl mb-2">Partners</p>
       <h1 className="text-4xl text-black font-bold text-center mb-10">
         Mediclave - Event Partners
       </h1>
@@ -66,7 +66,7 @@ const Partners = () => {
         </div>
       </div>
 
-      <Link to='/event_partners'><button className="mt-10 bg-black text-green-400 py-2 px-6 rounded-full">
+      <Link to='/event_partners'><button className="mt-10 bg-black text-one py-2 px-6 rounded-full">
         Become a Partner
       </button></Link>
     </div>

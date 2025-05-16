@@ -13,7 +13,7 @@ const Venue = () => {
                 </h1>
               </div>
       <div className="flex flex-col items-center text-center">
-        <h2 className="text-base md:text-lg font-normal text-green-400 mb-4">
+        <h2 className="text-base md:text-lg font-normal text-one mb-4">
           Proposed Conference Venue
         </h2>
         <h1 className="text-xl md:text-2xl gap-2 flex flex-row items-center justify-center">
@@ -31,7 +31,7 @@ const Venue = () => {
       <div className="flex flex-col lg:flex-row items-center my-6 gap-6">
         <div className="lg:w-[40vw]">
           <img
-            src="https://i.ytimg.com/vi/krwEkU8oExk/maxresdefault.jpg"
+            src="https://static-resources-elementor.mirai.com/wp-content/uploads/sites/1396/restaurante-home-rooftop.jpg"
             alt="Venue"
             className="w-full sm:w-34 md:w-full lg:w-full h-[30vh] md:h-[40vh] lg:h-[50vh] object-cover rounded-xl"
           />
@@ -54,7 +54,7 @@ const Venue = () => {
             <h1 className="text-sm md:text-[16px] font-normal leading-tight">
               {item.name}
             </h1>
-            <p className="text-sm md:text-[16px] leading-tight flex flex-row font-normal items-center text-green-400">
+            <p className="text-sm md:text-[16px] leading-tight flex flex-row font-normal items-center text-one">
               <MapPin size={16} className="mr-1" /> {item.km}km
             </p>
           </div>

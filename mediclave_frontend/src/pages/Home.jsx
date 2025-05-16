@@ -22,9 +22,9 @@ const Home = () => {
         <div className="absolute inset-0 bg-slate-950 bg-opacity-50 z-0"></div>
 
         {/* Content */}
-        <div className="relative z-2 flex flex-col items-start px-4 md:px-8 mt-4 justify-center h-full text-white text-2xl md:text-3xl font-bold">
+        <div className="relative z-2 flex flex-col items-start px-1 md:px-8 mt-4 justify-center h-full text-white text-2xl md:text-3xl font-bold">
           <div className="flex flex-row items-center gap-4">
-            <h1 className="text-secondary text-5xl md:text-6xl">NOV</h1>
+            <h1 className="text-one text-5xl md:text-6xl">NOV</h1>
             <div className="flex flex-col items-start">
               <p className="text-base md:text-lg font-normal">25-27</p>
               <p className="text-base md:text-lg gap-2 flex flex-row font-normal">
